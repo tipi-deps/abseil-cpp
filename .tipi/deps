@@ -1,0 +1,11 @@
+{
+  "platform:macos" : [ {"packages":["target"], "targets": [ "\"-framework CoreFoundation\"" ] } ],
+  "google/benchmark":  { 
+      "u": true, 
+      "packages": ["benchmark"], 
+      "targets": ["benchmark::benchmark", "benchmark::benchmark_main"],
+      "requires": {
+          "google/googletest": { "u": true, "packages": ["GTest"], "targets": ["GTest::gtest", "GTest::gmock"] }
+      }
+  }
+}
